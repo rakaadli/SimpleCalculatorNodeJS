@@ -42,4 +42,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            ls -lah
+            cd ~apps/SimpleCalculatorNodeJs
+            git pull origin master
+            npm install
+            pm2 restart all
